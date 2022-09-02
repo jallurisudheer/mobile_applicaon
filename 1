@@ -1,0 +1,33 @@
+@ -12,13 +12,14 @@ const useStyles = makeStyles((theme) => ({
+    justifyContent: 'center',
+    alignItems: 'center',
+    width: '600px',
+    border: '2px solid black',
+
+    [theme.breakpoints.down('xs')]: {
+      width: '90%',
+    },
+  },
+  heading: {
+    color: 'rgba(0,183,255, 1)',
+    // color: 'rgba(0,183,255, 1)',
+  },
+  image: {
+    marginLeft: '15px',
+  },
+}));
+const App = () => {
+  const classes = useStyles();
+  return (
+    <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', width: '100%' }}>
+      {/* <CssBaseline /> */}
+      <AppBar className={classes.appBar} position="static" color="inherit">
+        <Typography className={classes.heading} variant="h2" align="center">Video Chat</Typography>
+      </AppBar>
+      <VideoPlayer />
+      <Sidebar>
+        <Notifications />
+      </Sidebar>
+    </div>
+  );
+};
