@@ -1,1 +1,3 @@
-# mobile_applicaon
+# mobile_application
+Set up:
+1) run npm i &&npm start for both client and server side to start the development server
